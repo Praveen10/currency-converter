@@ -24,8 +24,6 @@ const CurrencyConverter = () => {
         }
     };
 
-    console.log('currencies', currencies);
-
     useEffect(() => {
         fetchCurrencies();
     }, [])
@@ -85,8 +83,8 @@ const CurrencyConverter = () => {
             focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 mt-5 ${converting?"animate-pulse": ""}`}>Convert</button>    
         </div>
         {convertedAmount && 
-            <div className='mt-5 text-lg font-medium text-center border border-gray-900 rounded-md'>
-                {amount} {fromCurrency} is {convertedAmount} {toCurrency}
+            <div className='mt-5 px-5 py-2 text-lg font-medium text-center border border-dashed border-gray-900 rounded-md'>
+                {amount} {fromCurrency} is <span className="">{convertedAmount} {toCurrency}</span>
             </div>
         }
     </div>
