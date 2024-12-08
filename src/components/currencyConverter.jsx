@@ -60,13 +60,13 @@ const CurrencyConverter = () => {
         {/* <Header /> */}
         <h2 className='mb-10 text-2xl font-semibold text-gray-700 text-center'>Currency Converter</h2>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 items-end">
-            <DropDown currencies={currencies} title='From' currency={fromCurrency} setCurrency={setFromCurrency}/>
+            <DropDown currencies={currencies} title='From' currency={fromCurrency} setCurrency={setFromCurrency} excludeCurrency={toCurrency}/>
             <div className='flex justify-center -mb-5 sm:mb-0'>
                 <button onClick={swapCurrencies} className='p-2 bg-indigo-500 rounded-full cursor-pointer hover:bg-indigo-700'>
                     <HiArrowsRightLeft className='text-xl text-white'/>
                 </button>
             </div>
-            <DropDown currencies={currencies} title='To'currency={toCurrency} setCurrency={setToCurrency}/>
+            <DropDown currencies={currencies} title='To'currency={toCurrency} setCurrency={setToCurrency} excludeCurrency={fromCurrency}/>
         </div>
         <div className="mt-4">
             <label 

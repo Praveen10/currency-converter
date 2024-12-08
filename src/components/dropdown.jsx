@@ -12,7 +12,8 @@ const DropDown = ({
     currencies,
     currency, 
     setCurrency,
-    title = ""
+    title = "",
+    excludeCurrency 
 }) => {
 
     const [isOpen, setIsOpen] = useState(false);
@@ -46,7 +47,7 @@ const DropDown = ({
                     className="absolute mt-1 bg-white border border-gray-300
                      rounded-md shadow-sm w-full max-h-60 gap-3 overflow-auto z-10"                    
                 >
-                    {currencies.map((currencyOption) => (
+                    {currencies.filter(currencyOption => currencyOption !== excludeCurrency).map((currencyOption) => (
                         <li
                             key={currencyOption}
                             className="p-2 flex items-center hover:bg-indigo-500 hover:text-white cursor-pointer gap-2"
