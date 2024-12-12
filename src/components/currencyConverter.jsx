@@ -57,7 +57,6 @@ const CurrencyConverter = () => {
 
   return (
     <div className='max-w-md mx-auto my-10 p-5 bg-slate-200 rounded-lg shadow-md'>
-        {/* <Header /> */}
         <h2 className='mb-10 text-2xl font-semibold text-gray-700 text-center'>Currency Converter</h2>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 items-end">
             <DropDown currencies={currencies} title='From' currency={fromCurrency} setCurrency={setFromCurrency} excludeCurrency={toCurrency}/>
